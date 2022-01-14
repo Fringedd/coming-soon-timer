@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Red Hat Text', sans-serif;
+  background-color: hsl(234, 17%, 12%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  width: 100%;
+  top: 0;
+  height: 450px;
+  background-image: url(./images/bg-stars.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: brightness(0) invert(0.5);
+}
+li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+.hills {
+  width: 100%;
+  height: 150px;
+  background-image: url(./images/pattern-hills.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.container h2 {
+  color: white;
+}
+
+.container {
+  width: 30rem;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+
+h6 {
+  color: hsl(237, 18%, 59%);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+#timer-cont {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.timer {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5px;
+  background-color: #2a2a41;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 8px 0px 0px #16151d;
+  position: relative;
+  overflow: hidden;
+}
+
+.timer::after {
+  content: '';
+  position: absolute;
+  z-index: 6;
+  left: -3px;
+  overflow: hidden;
+  top: calc(49% - 2px);
+  background: #24242e;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.timer::before {
+  content: '';
+  position: absolute;
+  z-index: 6;
+  right: -3px;
+  overflow: hidden;
+  top: calc(49% - 2px);
+  background: #24242e;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.timer h1 {
+  font-size: 4rem;
+  overflow: hidden;
+}
+.timer .card-top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+}
+.timer .card-bottom {
+  background-color: #33354d;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+}
+.card-bottom h1 {
+  font-size: 4rem;
+  color: hsl(345, 95%, 68%);
+  overflow: hidden;
+  position: absolute;
+  bottom: 40%;
+}
+.card-top h1 {
+  font-size: 4rem;
+  color: hsl(345, 95%, 68%);
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+}
+
+.social {
+  width: 20rem;
+  height: 3rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 7%;
+}
+
+#media {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.media-but:hover {
+  cursor: pointer;
+  filter: invert(56%) sepia(21%) saturate(5140%) hue-rotate(310deg)
+    brightness(100%) contrast(97%);
+}
+
+@media only screen and (max-width: 420px) {
+  body {
+    width: 420px;
+    height: 725px;
+  }
+  .overlay {
+    height: 600px;
+  }
+  .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  #timer-cont {
+    width: 100%;
+    margin-top: 6rem;
+  }
+  .container h2 {
+    color: white;
+    width: 16rem;
+    text-align: center;
+  }
+  .timer {
+    width: 5rem;
+    height: 5rem;
+  }
+  .timer h1 {
+    font-size: 2rem;
+  }
+  #timer-cont li {
+    margin-left: 1rem;
+  }
+  .hills {
+    height: 200px;
+  }
+}
